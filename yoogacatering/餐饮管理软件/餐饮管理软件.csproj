@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0D9BA672-FFB5-45EC-B6A0-CA8AA4297F47}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>yoogacatering</RootNamespace>
+    <AssemblyName>餐饮管理软件</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MySQL\MySQL Installer\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\DiscountInfo.cs" />
+    <Compile Include="Entity\Opers.cs" />
+    <Compile Include="Entity\Padorder.cs" />
+    <Compile Include="Entity\ShiftInfo.cs" />
+    <Compile Include="FormChangeTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangeTab.Designer.cs">
+      <DependentUpon>FormChangeTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCheckout.Designer.cs">
+      <DependentUpon>FormCheckout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDay.Designer.cs">
+      <DependentUpon>FormDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOpers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOpers.Designer.cs">
+      <DependentUpon>FormOpers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrintSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrintSetting.Designer.cs">
+      <DependentUpon>FormPrintSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShift.Designer.cs">
+      <DependentUpon>FormShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printer\BarBillDetailPrinter.cs" />
+    <Compile Include="Printer\BarBillPrinter.cs" />
+    <Compile Include="Entity\BillDetailInfo.cs" />
+    <Compile Include="Entity\BillInfo.cs" />
+    <Compile Include="Entity\Food.cs" />
+    <Compile Include="Entity\FoodCategory.cs" />
+    <Compile Include="Entity\PlanFood.cs" />
+    <Compile Include="Entity\TabInfo.cs" />
+    <Compile Include="Entity\TableEnv.cs" />
+    <Compile Include="Entity\User.cs" />
+    <Compile Include="FormAddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddCategory.Designer.cs">
+      <DependentUpon>FormAddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddFood.Designer.cs">
+      <DependentUpon>FormAddFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddPlan.Designer.cs">
+      <DependentUpon>FormAddPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddTab.Designer.cs">
+      <DependentUpon>FormAddTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddTabEnv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddTabEnv.Designer.cs">
+      <DependentUpon>FormAddTabEnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessage.Designer.cs">
+      <DependentUpon>FormMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOpen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOpen.Designer.cs">
+      <DependentUpon>FormOpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrder.Designer.cs">
+      <DependentUpon>FormOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRetreat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRetreat.Designer.cs">
+      <DependentUpon>FormRetreat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTabs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTabs.Designer.cs">
+      <DependentUpon>FormTabs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateFood.Designer.cs">
+      <DependentUpon>FormUpdateFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printer\CheckoutPrinter.cs" />
+    <Compile Include="Printer\ConsumeBillPrinter.cs" />
+    <Compile Include="Printer\KitchenBillDetailPrinter.cs" />
+    <Compile Include="Printer\KitchenBillPrinter.cs" />
+    <Compile Include="Printer\PrintUtils.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\BillDetailInfoService.cs" />
+    <Compile Include="Service\BillInfoService.cs" />
+    <Compile Include="Service\CommService.cs" />
+    <Compile Include="Service\DbUtil.cs" />
+    <Compile Include="Service\DiscountService.cs" />
+    <Compile Include="Service\FoodCategoryService.cs" />
+    <Compile Include="Service\FoodService.cs" />
+    <Compile Include="Service\OpersService.cs" />
+    <Compile Include="Service\PlanFoodService.cs" />
+    <Compile Include="Service\ShiftInfoService.cs" />
+    <Compile Include="Service\TabEnvService.cs" />
+    <Compile Include="Service\TabInfoService.cs" />
+    <Compile Include="Service\UserService.cs" />
+    <Compile Include="Utils\App.cs" />
+    <Compile Include="Utils\ImageUtil.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <EmbeddedResource Include="FormAddCategory.resx">
+      <DependentUpon>FormAddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddFood.resx">
+      <DependentUpon>FormAddFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddPlan.resx">
+      <DependentUpon>FormAddPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangeTab.resx">
+      <DependentUpon>FormChangeTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCheckout.resx">
+      <DependentUpon>FormCheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDay.resx">
+      <DependentUpon>FormDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOpen.resx">
+      <DependentUpon>FormOpen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOpers.resx">
+      <DependentUpon>FormOpers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOrder.resx">
+      <DependentUpon>FormOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrintSetting.resx">
+      <DependentUpon>FormPrintSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRetreat.resx">
+      <DependentUpon>FormRetreat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShift.resx">
+      <DependentUpon>FormShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTabs.resx">
+      <DependentUpon>FormTabs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateFood.resx">
+      <DependentUpon>FormUpdateFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
